@@ -1,0 +1,156 @@
+/* Navbar container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Navbar header styles */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Logo styles */
+header .col-md-3 img,
+.navbar-logo img {
+  height: 80px;
+  width: 80px;
+}
+
+/* Navigation list styles */
+.nav {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Navigation item styles */
+.nav-link {
+  padding: 0.5rem 1rem;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+/* Dropdown container */
+.position-relative {
+  position: relative;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 160px;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding: 0;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+/* Dropdown item styling */
+.dropdown-item {
+  padding: 10px 15px;
+  color: #007bff;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+}
+
+/* Buttons for Login and Sign-up */
+.btn {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+}
+
+.btn-outline-dark {
+  border: 1px solid #007bff;
+  color: #007bff;
+}
+
+.btn-dark {
+  background-color: #007bff;
+  color: white;
+}
+
+.signup {
+  background-color: #28a745;
+  color: white;
+}
+
+.signup:hover {
+  background-color: #218838;
+}
+
+/* Responsive layout */
+
+/* Mobile: Hide nav links */
+@media (max-width: 767px) {
+  .nav {
+    display: none;
+  }
+
+  .navbar-menu-btn {
+    display: none; /* Menu icon hidden */
+  }
+
+  .navbar-auth-btns {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+/* Tablet and above: show all in one row */
+@media (min-width: 768px) {
+  header {
+    flex-wrap: nowrap;
+  }
+
+  .navbar-logo {
+    flex: 1;
+  }
+
+  .nav {
+    flex: 2;
+    display: flex !important;
+  }
+
+  .navbar-auth-btns {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
+  .navbar-menu-btn {
+    display: none;
+  }
+}
